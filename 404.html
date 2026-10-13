@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found · Abhishek Shukla</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<script>try{var t=localStorage.getItem('as-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+/* Layout: two-column split. A sticky identity column (name, a live event-stream instrument, section nav)
+   sits beside a scrolling log of work; below 1024px it stacks into one column with sticky section labels. */
+:root {
+  /* dark-first palette: ink with a teal bias, iris accent, amber for duplicate deliveries */
+  --bg: #0c1417;
+  --raised: #111d21;
+  --fg: #e3ebe9;
+  --muted: #8fa29f;
+  --line: #1f2e33;
+  --accent: #9db3ff;
+  --accent-ink: #0c1417;
+  --warn: #f0b46a;
+  --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent);
+
+  --font-display: "Bricolage Grotesque", "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --gutter: clamp(16px, 5vw, 56px);
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f2f5f4; --raised: #ffffff; --fg: #0f191c; --muted: #53656a; --line: #d6dfde;
+    --accent: #3450c2; --accent-ink: #ffffff; --warn: #a65f0b;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f2f5f4; --raised: #ffffff; --fg: #0f191c; --muted: #53656a; --line: #d6dfde;
+  --accent: #3450c2; --accent-ink: #ffffff; --warn: #a65f0b;
+  color-scheme: light;
+}
+
+
+body{margin:0;min-height:100dvh;display:grid;place-items:center;background:var(--bg);color:var(--fg);font-family:var(--font-body);padding:24px 16px}
+main{max-width:30rem}
+p.code{font:500 .8rem/1 var(--font-mono);color:var(--warn);margin:0 0 18px}
+h1{font-family:var(--font-display);font-size:clamp(2rem,1.5rem + 2vw,2.8rem);letter-spacing:-.03em;line-height:1.05;margin:0 0 14px}
+p{color:var(--muted);line-height:1.6;margin:0 0 28px}
+a{color:var(--fg);font-weight:600;border-bottom:1px solid var(--accent);text-decoration:none}
+a:hover{color:var(--accent)}
+</style></head>
+<body><main>
+<p class="code">404 &middot; offset out of range</p>
+<h1>Nothing was ever written here.</h1>
+<p>The page you asked for doesn't exist. It may have moved when this site was rebuilt.</p>
+<a href="/">Back to the homepage</a>
+</main></body></html>
