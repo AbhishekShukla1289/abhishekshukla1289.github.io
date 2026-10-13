@@ -232,16 +232,7 @@
         <div class="tag"><b>●</b> agents in production, humans in the loop</div>
       </div>
     </div>
-
-    <div class="ticker" aria-hidden="true">
-      <div class="thead"><span>event stream · live</span><span class="live">● streaming</span></div>
-      <div class="tline"><span class="k">topic</span><span>subscriber.onboarded</span><span class="ok">✓ delivered · offset 88123</span></div>
-      <div class="tline"><span class="k">agent</span><span>dq-agent → jira.write</span><span class="dup">⏸ awaiting human approval in Slack</span></div>
-      <div class="tline"><span class="k">topic</span><span>payment.webhook</span><span class="dup">↻ duplicate delivery · deduped by idempotency key</span></div>
-      <div class="tline"><span class="k">topic</span><span>dependency.timeout</span><span class="ok">✓ bounded retry · backoff · circuit open avoided</span></div>
-    </div>
-
-    <div class="logostrip">
+<div class="logostrip">
       <p>Experience across</p>
       <div class="logos">
         <div class="logo-tile"><span class="mark"><img src="assets/logos/yahoo.png" alt="Yahoo logo"></span><span>Yahoo<small>Yahoo Finance</small></span></div>
@@ -326,26 +317,44 @@
       <article class="job-card rv">
         <div class="job-logo"><img src="assets/logos/yahoo.png" alt="Yahoo logo"></div>
         <div>
-          <div class="job-head"><h3>Software Engineer <span class="at">· Yahoo</span></h3><span class="when now">Now</span></div>
-          <p class="where">Yahoo Finance · subscription and user data services</p>
-          <p>I build AI agent systems (multi-agent orchestration, MCP tooling, evaluation) and run the backend services behind Yahoo Finance subscriptions, including the subscriber onboarding API. The services run on Kubernetes, ship through Screwdriver CI/CD and authenticate service-to-service with Athenz mTLS.</p>
-          <div class="tags"><span class="pill">AI Agents</span><span class="pill">LangGraph</span><span class="pill">MCP</span><span class="pill">Kubernetes</span><span class="pill">Athenz mTLS</span><span class="pill">Screwdriver CI/CD</span><span class="pill">REST APIs</span></div>
+          <div class="job-head"><h3>Senior Software Engineer <span class="at">· Yahoo Finance</span></h3><span class="when now">Jan 2026 — Present</span></div>
+          <p class="where">Yahoo Finance · Mountain View, CA</p>
+          <ul>
+            <li>Ship Core Java in a non-blocking Vert.x service behind Yahoo Finance's subscription and entitlement REST APIs; own auth and tier-based authorization, including a fix for a leak exposing paid content.</li>
+            <li>Owned architecture and delivery of a distributed, event-driven free-trial platform: Kotlin/Ktor services on Netty plus AWS Lambda over DynamoDB Streams, SQS, and EventBridge, provisioned with Terraform — with a transactional outbox guaranteeing at-least-once, idempotent delivery on revenue-critical transitions.</li>
+            <li>Led migration of production messaging to a v3 API secured by mTLS (rotating X.509 client certs) plus OAuth2; shipped dark behind feature flags and cut over with zero downtime.</li>
+            <li>On call, root-caused an incident that dead-lettered ~790 billing webhooks after a rotated secret broke strict deserialization; redrove the backlog and fixed the telemetry gap that had masked errors for four days.</li>
+            <li>Currently contributing to Apache Kafka through an active community ticket, working directly in its streaming internals.</li>
+          </ul>
+          <div class="tags"><span class="pill">Java</span><span class="pill">Vert.x</span><span class="pill">Kotlin / Ktor</span><span class="pill">AWS</span><span class="pill">DynamoDB Streams</span><span class="pill">mTLS</span><span class="pill">Kafka</span></div>
         </div>
       </article>
 
       <article class="job-card rv">
         <div class="job-logo"><img class="fill" src="assets/logos/ftnss.png" alt="FTNSS logo"></div>
         <div>
-          <div class="job-head"><h3>Software Engineer <span class="at">· FTNSS Inc.</span></h3><span class="when">Before</span></div>
-          <p class="where">Backend software engineering.</p>
+          <div class="job-head"><h3>Founding Engineer <span class="at">· FTNSS Inc.</span></h3><span class="when">May 2025 — Jan 2026</span></div>
+          <p class="where">Remote, US</p>
+          <ul>
+            <li>Built the backend from zero in Java/Spring Boot, load-tested to 10K+ daily bookings and check-ins at sub-200ms p95 via Redis caching, request batching, and index-aware schema design.</li>
+            <li>Implemented rate limiting and traffic controls at the API boundary to throttle abusive and automated traffic, alongside OAuth2/Spring Security authentication and row-level authorization.</li>
+            <li>Automated infrastructure and CI/CD on Docker, Kubernetes, ArgoCD, and GitHub Actions, enabling multiple releases per week and cutting deployment time by 50%.</li>
+          </ul>
+          <div class="tags"><span class="pill">Java</span><span class="pill">Spring Boot</span><span class="pill">Redis</span><span class="pill">Kubernetes</span><span class="pill">ArgoCD</span></div>
         </div>
       </article>
 
       <article class="job-card rv">
         <div class="job-logo"><img src="assets/logos/tigergraph.png" alt="TigerGraph logo"></div>
         <div>
-          <div class="job-head"><h3>Software Engineer <span class="at">· TigerGraph</span></h3><span class="when">Before</span></div>
-          <p class="where">Distributed graph database · data loading and query services.</p>
+          <div class="job-head"><h3>Software Engineer <span class="at">· TigerGraph</span></h3><span class="when">May — Sep 2024</span></div>
+          <p class="where">Redwood City, CA</p>
+          <ul>
+            <li>Worked on knowledge graphs and an ML-based fraud detection system built on TigerGraph's distributed graph database.</li>
+            <li>Built Spark and Hadoop data-loading pipelines ingesting large datasets from HDFS into the distributed graph database.</li>
+            <li>Delivered Spring Boot REST APIs for distributed graph queries over a horizontally partitioned datastore; re-engineered Maven CI/CD, cutting deployment time by 40%.</li>
+          </ul>
+          <div class="tags"><span class="pill">Spark</span><span class="pill">Hadoop</span><span class="pill">Spring Boot</span><span class="pill">Graph Databases</span></div>
         </div>
       </article>
 
@@ -362,15 +371,15 @@
       <article class="job-card rv">
         <div class="job-logo"><img src="assets/logos/oracle.png" alt="Oracle logo"></div>
         <div>
-          <div class="job-head"><h3>Software Engineer <span class="at">· Oracle</span></h3><span class="when">2018 — 2021</span></div>
-          <p class="where">Oracle Financial Services · Mumbai</p>
+          <div class="job-head"><h3>Software Development Engineer <span class="at">· Oracle</span></h3><span class="when">Sep 2018 — Dec 2021</span></div>
+          <p class="where">Mumbai, India</p>
           <ul>
-            <li>Delivered more than 1,500 REST APIs for Oracle's banking products, covering balance inquiry, payments and authentication for 50+ clients across Europe.</li>
-            <li>Built account access management with two-factor authentication, JWT and Google MFA.</li>
-            <li>Set up logging and monitoring on Elasticsearch, Logstash and Kibana so production issues in the microservices could be found and fixed quickly.</li>
-            <li>Wrote an end-to-end API test suite with Postman, JUnit and Cucumber covering unit, functional and performance tests.</li>
+            <li>Engineered high-throughput core banking APIs in Core Java, sustaining 500K+ daily transactions at sub-50ms through Redis/Memcached caching, thread-pool tuning, and query-path optimization.</li>
+            <li>Built Spark and Hadoop batch pipelines processing high-volume core banking transaction data at scale.</li>
+            <li>Designed an API management framework for 100+ REST APIs with modular deployment and externalized configuration, adopted as the standard across product teams.</li>
+            <li>Deployed to AWS via Cloud Foundry and Terraform at 99.9% uptime; hardened releases with Fortify and a 500-test CI regression suite.</li>
           </ul>
-          <div class="tags"><span class="pill">Java</span><span class="pill">J2EE</span><span class="pill">JAX-RS</span><span class="pill">Spring Boot</span><span class="pill">ELK</span></div>
+          <div class="tags"><span class="pill">Core Java</span><span class="pill">Spark</span><span class="pill">Hadoop</span><span class="pill">Redis</span><span class="pill">AWS</span><span class="pill">Terraform</span></div>
         </div>
       </article>
 
